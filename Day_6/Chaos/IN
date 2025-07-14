@@ -1,0 +1,5 @@
+1          Experiment number
+1000       Number of time steps
+1          Print control
+0.01       Time step
+

@@ -1,0 +1,62 @@
+opti conp full
+#keyword force_minimisation
+#keyword conj
+#keyword dfp
+#keyword rfo
+#switch bfgs cycle 10
+#keyword nosym
+
+#keyword linmin
+#terse potentials
+#terse derivatives
+
+maxcyc 100
+stepmx opt 1.0
+update 10
+
+#keyword phonon
+#keyword free_energy 
+#keyword zsisa
+
+keyword property
+temperature 298 
+pressure    0
+ 
+title
+alumina corundum structure file
+Potential is Bush (1994)
+end
+cell
+4.7602   4.7602  12.9933  90.000000  90.000000 120.0
+frac
+Al core 0.000000   0.000000   0.352160 
+Al shel 0.000000   0.000000   0.352160 
+O  core 0.306240   0.000000   0.250000 
+O  shel 0.306240   0.000000   0.250000 
+space
+167
+
+supercell 1 1 1 
+#shrink 1 1 1
+#dispersion 3 20
+#0.0 0.0 0.0 to 0.5 0.0 0.0
+#0.0 0.0 0.0 to 0.5 0.5 0.0
+#0.0 0.0 0.0 to 0.5 0.5 0.5
+
+species
+Al core  0.043
+Al shel  2.957
+O  core  0.513
+O  shel -2.513
+buckingham
+Al shel O shel  2409.505 0.2649  0.00 0.0 10.0
+O  shel O shel    25.410 0.6937 32.32 0.0 12.0
+spring
+Al 403.98
+O   20.53
+
+#keyword c6
+#cutp mdf 10.0 12.0
+
+#output xyz corundum1
+#output phonon corundum1
