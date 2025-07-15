@@ -61,6 +61,6 @@ O   20.53
 #keyword c6
 #cutp mdf 10.0 12.0
 
-output xyz rhodium1
+output cif rhodium1
 #output phonon rhodium1
 

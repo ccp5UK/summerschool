@@ -58,5 +58,5 @@ O   20.53
 #keyword c6
 #cutp mdf 10.0 12.0
 
-output xyz corundum1
+output cif corundum1
 #output phonon corundum1
