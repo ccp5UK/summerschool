@@ -60,5 +60,5 @@ O   20.53
 #keyword c6
 #cutp mdf 10.0 12.0
 
-#output xyz bixbyite1
+output xyz bixbyite1
 #output phonon bixbyite1
