@@ -1,0 +1,49 @@
+LJ
+
+# define state point
+temperature            240.5
+pressure               599.0
+
+# simulation length and equilibration
+steps                   500000
+equilibration steps     10000
+scale every             10
+timestep                0.0005
+#restart
+
+# ensemble
+ensemble nvt hoover    0.02  0.2
+
+# chemical potential method
+fgdistribution 1 1  1.2
+
+
+# cutoffs
+cutoff                2.5 angstrom
+delr                  0.3 angstrom
+
+# forcefield
+no elec
+
+#periodic shift
+
+#print controller
+print every 100 steps
+
+# statistics options
+stats every 100 steps
+
+# trajectory dumping
+trajectory nstraj 1 istraj 100000 keytrj 0  
+
+#visual
+pdb 100000
+
+job time     1000000 seconds
+close time       30 seconds
+
+
+finish
+
+
+
