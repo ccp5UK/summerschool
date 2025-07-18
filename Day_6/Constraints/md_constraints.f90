@@ -80,7 +80,7 @@ program md_constraints
   call random_init ( .false., .true. ) ! Initialize random number generator
 
   ! Set sensible default run parameters for testing
-  nstep       = 10000
+  nstep       = 2000
   dt          = 0.002
   nvt         = .false.
   temperature = 1.0

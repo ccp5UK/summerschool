@@ -70,7 +70,7 @@ program md_springs
   call random_init ( .false., .true. ) ! Initialize random number generator
 
   ! Set sensible default run parameters for testing
-  nstep       = 100000
+  nstep       = 20000
   dt          = 0.0002
   nvt         = .false.
   temperature = 1.0
