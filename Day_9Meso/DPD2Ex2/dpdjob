@@ -1,0 +1,14 @@
+!/usr/bin/env bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=32
+#SBATCH -t 01:00:00
+#SBATCH -o %j.out
+#SBATCH -e %j.err
+#SBATCH --exclusive
+#SBATCH --reservation=ccp5
+#SBATCH -C scarf21
+cd $PWD
+module load netCDF-Fortran
+CWD=/work4/training/ccp5/meso
+mpirun -n 32 $CWD/dpd.exe
+$CWD/traject_vtf.exe

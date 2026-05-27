@@ -1,0 +1,6 @@
+project('build_all', 'fortran', meson_version: '>=1.10',default_options:['fortran_std=f2018','warning_level=1','optimization=2'])
+add_project_arguments('-fall-intrinsics',language:'fortran')
+hdf5_dep=dependency('hdf5', language: 'fortran')
+subdir('src')
+executable('md_springs',md_springs_files,dependencies:hdf5_dep)
+executable('md_constraints',md_constraints_files,dependencies:hdf5_dep)

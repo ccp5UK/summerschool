@@ -1,0 +1,57 @@
+opti conp full
+#keyword force_minimisation
+#keyword conj
+#keyword dfp
+#keyword rfo
+#switch bfgs cycle 10
+#keyword nosym
+
+#keyword linmin
+#terse out potentials
+#terse out derivatives
+
+maxcyc 100
+stepmx opt 1.0
+update 10
+
+#keyword phonon
+#keyword free_energy 
+#keyword zsisa
+
+keyword property
+temperature 298 
+pressure    0
+
+title
+alumina bixbyite structure file
+Potential is Gale (1992)
+end
+cell
+10.61   10.61    10.61    90.000000  90.000000 90.00
+frac
+Al core 0.000000   0.000000   0.00 
+Al core 0.2816     0.00       0.25	
+O  core 0.093      0.355000   0.128000 
+space
+206
+
+supercell 1 1 1
+#shrink 1 1 1
+#dispersion 3 20
+#0.0 0.0 0.0 to 0.5 0.0 0.0
+#0.0 0.0 0.0 to 0.5 0.5 0.0
+#0.0 0.0 0.0 to 0.5 0.5 0.5 
+
+species
+Al core  2.25 
+O  core  -1.5
+buckingham
+Al core Al core 12140.71 0.2098  0.00 0.0  8.0
+Al core O core  9912.32  0.2003  0.00 0.0  8.0
+O  core O core  2122.15  0.2788  0.35 0.0  8.0
+
+#keyword c6
+#cutp mdf 10.0 12.0
+
+output cif bixbyite2
+output phonon bixbyite2
