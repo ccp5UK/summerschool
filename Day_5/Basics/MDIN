@@ -1,9 +1,0 @@
-1000          number of time steps
-100           number of equilibration steps
-10             sampling interval for properties
-0.8            particle density (LJ units)
-1.0            temperature (LJ units)
-0.001          time step (LJ units)
-.true.        trajectory file option
-.false.         write positions (.true.) or velocities (.false.)
-13 17          used to initialize the random numbers seed array 
