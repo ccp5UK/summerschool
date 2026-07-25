@@ -34,6 +34,8 @@ def run_DPD(rundir='DPD1Ex2', dlmesoexe='dl_meso/WORK/dpd.exe', numcores=1, dele
             os.remove(outdir+"/HISTORY")
         if os.path.exists(outdir+"/OUTPUT"):
             os.remove(outdir+"/OUTPUT")
+        if os.path.exists(outdir+"/ZDNDAT"):
+            os.remove(outdir+"/ZDNDAT")
     # get hold of number of timesteps for DL_MESO_DPD calculation
     # from CONTROL file in supplied directory
     with open(outdir+"/CONTROL", 'r') as control:
@@ -59,10 +61,11 @@ def run_DPD(rundir='DPD1Ex2', dlmesoexe='dl_meso/WORK/dpd.exe', numcores=1, dele
                 _, startrun, _, _, numstep, terminate, _ = dlmo.read_prepare(outfile)
                 if startrun>0:
                     rundata, _, _, _ = dlmo.read_run(outfile, startrun, terminate)
-                    stepnum = int(rundata[-1,0])
-                    if stepnum != stepnum0:
-                        pbar.update(stepnum-stepnum0)
-                        stepnum0 = stepnum
+                    if len(rundata)>0:
+                        stepnum = int(rundata[-1,0])
+                        if stepnum != stepnum0:
+                            pbar.update(stepnum-stepnum0)
+                            stepnum0 = stepnum
     # close down progress bar
     pbar.close()
 

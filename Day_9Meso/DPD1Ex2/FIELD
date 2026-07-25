@@ -5,8 +5,13 @@ A 1.0 0.0 1500
 B 1.0 0.0 1500
 
 INTERACTIONS 3
-A A dpd   25.0 1.0 1.0
-A B dpd  100.0 1.0 1.0
-B B dpd   25.0 1.0 1.0
+A A dpd   25.0 1.0
+A B dpd  100.0 1.0
+B B dpd   25.0 1.0
+
+THERMOSTAT 3
+A A quad   1.0 1.0
+A B quad   1.0 1.0
+B B quad   1.0 1.0
 
 CLOSE

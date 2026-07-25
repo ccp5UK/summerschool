@@ -8,6 +8,8 @@ michael.seaton@stfc.ac.uk, 04/10/22
 
 import sys
 import numpy as np
+import struct
+import os
 
 def read_prepare(filename):
     """Reads first few values in DL_MESO_DPD HISTORY file to find essential information for reading further"""

@@ -16,11 +16,19 @@ harm  1 2 100.0 0.50
 finish
 
 INTERACTIONS 6
-A A dpd  25.0 1.0 5.625
-A B dpd  30.0 1.0 5.625
-A S dpd   0.0 1.0 5.625
-B B dpd  25.0 1.0 5.625
-B S dpd  50.0 1.0 5.625
-S S dpd  25.0 1.0 5.625
+A A dpd  25.0 1.0
+A B dpd  30.0 1.0
+A S dpd   0.0 1.0
+B B dpd  25.0 1.0
+B S dpd  50.0 1.0
+S S dpd  25.0 1.0
+
+THERMOSTAT 6
+A A quad  5.625 1.0
+A B quad  5.625 1.0
+A S quad  5.625 1.0
+B B quad  5.625 1.0
+B S quad  5.625 1.0
+S S quad  5.625 1.0
 
 CLOSE

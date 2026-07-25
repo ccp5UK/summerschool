@@ -9,7 +9,7 @@ def plotConcentration(filename, dataset=1):
         return
     set = dataset-1
     fig, ax = plt.subplots()
-    ax.set(xlabel='x [DPD length units]', ylabel=r'Bead concentration, $\phi$', title=datumNames[set])
+    ax.set(xlabel='z [DPD length units]', ylabel=r'Bead concentration, $\phi$', title=datumNames[set])
     ax.set_xlim(left=min(concdata[2*set]), right=max(concdata[2*set]))
     ax.set_ylim(bottom=0.0, top=1.0)
     ax.plot(concdata[2*set], concdata[2*set+1], 'r-')
